@@ -1,0 +1,167 @@
+* {
+    font-family: sans-serif;
+}
+
+.trips-page {
+    display: flex;
+    flex-direction: column;
+}
+
+.all-trips {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.trips-headline {
+    text-align: center;
+    color: #000000;
+    padding: 4vh;
+    font-weight: unset;
+    font-size: 3em;
+}
+
+.trip-card {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: #0000004a 0px 0px 5px -1px;
+    width: 90vw;
+    max-width: 1000px;
+}
+
+.trip-card-hr {
+    margin: 0px 4px 0px 4px;
+    border: 1px gray solid;
+}
+
+.trip-image {
+    height: 15vw;
+}
+
+.trip-card-properties {
+    display: flex;
+}
+
+.trip-display {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.massage {
+    animation: scale 200ms cubic-bezier(0.4, 0, 1, 1);
+    background-color: white;
+    padding: 12px;
+    box-shadow: #00000087 1px 1px 5px -1px;
+    border-radius: 4px;
+}
+
+.massage * {
+    padding: 7px;
+}
+
+.massage div {
+    padding: 0;
+    margin: 0;
+}
+
+.massage button {
+    border: none;
+    color: rgb(0, 154, 206);
+    background-color: white;
+    border-radius: 4px;
+}
+
+.massage button:hover {
+    background-color: rgb(216, 216, 216);
+}
+
+.header {
+    width: 100%;
+    height: 15vh;
+    background-color: #2882fd;
+}
+
+.footer {
+    width: 100%;
+    min-height: 25vh;
+    background-color: #2882fd;
+}
+
+.home-page {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 100px);
+}
+
+.home-headline {
+    color: #2882fd;
+    text-align: center;
+    width: 100%;
+    font-size: 3em;
+    padding-top: 10vh;
+}
+
+.main-menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.main-menu button {
+    background-color: #2882fd;
+    color: white;
+    border: none;
+    font-size: 2em;
+    border-radius: 4px;
+    width: 20vw;
+    height: 15vw;
+    transition: 200ms;
+    box-shadow: none;
+}
+
+.main-menu button:hover {
+    transform: scale(1.05);
+    background-color: #2882fd;
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: 10vh;
+    }
+    .main-menu {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .main-menu button {
+        width: 50vw;
+        height: 10vh;
+        margin: 3vh;
+    }
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
